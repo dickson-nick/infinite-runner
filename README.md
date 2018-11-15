@@ -17,5 +17,11 @@ Design
         Upgrades are tied to "w" and "s"  
       Earning coins or stars to get upgrades  
       Jumping would be an upgrade  
-			  
-		4. Add Textures last  
+      
+    4. Add Textures Last  
+      
+    Git Commands  
+    	git pull  
+	git add *  
+	git commit -m "[comment]"  
+	git push  
