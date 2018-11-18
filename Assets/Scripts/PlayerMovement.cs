@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*******************************************
+ *      Controls movement of player        *  
+ ******************************************/
 public class PlayerMovement : MonoBehaviour {
 
     public Rigidbody rb;
@@ -34,7 +37,7 @@ public class PlayerMovement : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            //.Translate(Vector3.up * upwardsForce * Time.deltaTime);
+            //transform.Translate(Vector3.up * upwardsForce * Time.deltaTime);
             rb.AddForce(0, upwardsForce * Time.deltaTime, 0, ForceMode.VelocityChange);
             isGrounded = false;
         }

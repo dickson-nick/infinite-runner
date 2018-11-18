@@ -1,7 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
+/*******************************************
+ *      Dictates behavior when player      *
+ *         collides with an obejct         *
+ ******************************************/
 public class PlayerCollision : MonoBehaviour {
 
     public PlayerMovement movement;
@@ -21,6 +26,7 @@ public class PlayerCollision : MonoBehaviour {
         if (collision.collider.tag == "Obstacle")
         {
             movement.enabled = false;
+            SceneManager.LoadScene("MainMenu");
         }
 
         if (collision.collider.name == "Ground")

@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*******************************************
+ *  Script that is used to make the camera *
+ *      follow the player as he moves      *
+ ******************************************/
 public class FollowPlayer : MonoBehaviour {
 
     public Transform player;
