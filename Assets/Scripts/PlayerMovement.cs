@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
-        if (Input.GetKeyDown(PlayerPrefs.GetString("JumpKeyBind")) && isGrounded)
+        if (Input.GetKeyDown(PlayerPrefs.GetString("JumpKeyBind")) && isGrounded && gameObject.transform.position.y <= 3)
         {
             //transform.Translate(Vector3.up * upwardsForce * Time.deltaTime);
             rb.AddForce(0, upwardsForce * Time.deltaTime, 0, ForceMode.VelocityChange);
