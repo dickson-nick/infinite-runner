@@ -10,6 +10,9 @@ public class SetKeyOnClick : MonoBehaviour {
         GameObject.Find("Move Left Button/Text").GetComponent<Text>().text = PlayerPrefs.GetString("LeftKeyBind").ToUpper();
         GameObject.Find("Move Right Button/Text").GetComponent<Text>().text = PlayerPrefs.GetString("RightKeyBind").ToUpper();
         GameObject.Find("Jump Button/Text").GetComponent<Text>().text = PlayerPrefs.GetString("JumpKeyBind").ToUpper();
+
+        GameObject.Find("Music Slider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("MusicVolume");
+        GameObject.Find("Effects Slider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("EffectsVolume");
     }
 
     public void SetKey(string key)

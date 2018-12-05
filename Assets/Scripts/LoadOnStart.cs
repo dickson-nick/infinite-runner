@@ -19,6 +19,21 @@ public class LoadOnStart : MonoBehaviour {
         if (!PlayerPrefs.HasKey("JumpKeyBind"))
             PlayerPrefs.SetString("JumpKeyBind", "space");
 
+        if (!PlayerPrefs.HasKey("MusicVolume"))
+            PlayerPrefs.SetFloat("MusicVolume", 1.0f);
+
+        if (!PlayerPrefs.HasKey("EffectsVolume"))
+            PlayerPrefs.SetFloat("EffectsVolume", 1.0f);
+
         DontDestroyOnLoad(gameObject);
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        if (level >= 6 && level <= 8)
+        {
+            Debug.Log("Loaded.");
+            GameObject.Find("Menu Select Audio").GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("EffectsVolume");
+        }
     }
 }
