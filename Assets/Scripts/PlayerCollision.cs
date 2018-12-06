@@ -26,7 +26,8 @@ public class PlayerCollision : MonoBehaviour {
         if (collision.collider.tag == "Obstacle")
         {
             movement.enabled = false;
-            SceneManager.LoadScene("MainMenu");
+            FindObjectOfType<GameManager>().EndGame();
+           // SceneManager.LoadScene("MainMenu");
         }
 
         if (collision.collider.name == "Ground")
