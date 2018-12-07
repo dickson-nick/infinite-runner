@@ -7,11 +7,19 @@ public class GameManager : MonoBehaviour {
     bool gameHasEnded = false;
     public float RESTART_DELAY = 1.5f;
 
-    public void EndGame()
+    public GameObject levelCompleteUI;
+
+    public void LevelComplete()
+    {
+        Debug.Log("Level Complete!");
+        levelCompleteUI.SetActive(true);
+    }
+
+    public void GameOver()
     {
         if(!gameHasEnded)
         {
-            Debug.Log("GAME OVER");
+            Debug.Log("Game Over!");
             gameHasEnded = true;
             Invoke("Restart", RESTART_DELAY);
         }

@@ -8,6 +8,6 @@ public class DontDestroy : MonoBehaviour {
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene("MainMenu");
     }
 }
