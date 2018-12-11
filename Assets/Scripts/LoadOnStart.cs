@@ -30,10 +30,10 @@ public class LoadOnStart : MonoBehaviour {
 
     private void OnLevelWasLoaded(int level)
     {
-        if (level >= 6 && level <= 8)
-        {
+        //if (level >= 6 && level <= 8)
+        //{
             Debug.Log("Loaded.");
             GameObject.Find("Menu Select Audio").GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("EffectsVolume");
-        }
+        //}
     }
 }

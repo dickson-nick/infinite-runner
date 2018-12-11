@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour {
     private string rightKeyBind;
     private string jumpKeyBind;
 
+    public GameObject pauseMenu;
+
 	// Use this for initialization
 	void Start () {
         isGrounded = false;
@@ -26,6 +28,12 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0f;
+        }
 
         if (Input.GetKey(PlayerPrefs.GetString("RightKeyBind")))
         {
