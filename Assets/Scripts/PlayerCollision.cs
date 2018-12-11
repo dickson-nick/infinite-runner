@@ -27,7 +27,6 @@ public class PlayerCollision : MonoBehaviour {
         {
             movement.enabled = false;
             FindObjectOfType<GameManager>().GameOver();
-           // SceneManager.LoadScene("MainMenu");
         }
 
         if (collision.collider.name == "Ground")

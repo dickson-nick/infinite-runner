@@ -5,15 +5,24 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     bool gameHasEnded = false;
-    public float RESTART_DELAY = 1.5f;
+    public float RESTART_DELAY = 0.5f;
 
     public GameObject levelCompleteUI;
+    public GameObject levelFailedUI;
 
     public void LevelComplete()
     {
-        PlayerPrefs.SetInt("UnlockedLevel", SceneManager.GetActiveScene().buildIndex);
-        Debug.Log("Level Complete!");
-        levelCompleteUI.SetActive(true);
+        if (!gameHasEnded)
+        {
+            PlayerPrefs.SetInt("UnlockedLevel", SceneManager.GetActiveScene().buildIndex);
+            Debug.Log("Level Complete!");
+            levelCompleteUI.SetActive(true);
+        }
+    }
+    
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void GameOver()
@@ -22,14 +31,27 @@ public class GameManager : MonoBehaviour {
         {
             Debug.Log("Game Over!");
             gameHasEnded = true;
-            Invoke("Restart", RESTART_DELAY);
+            Invoke("DeathScreen", RESTART_DELAY);
         }
         
     }
 
-    void Restart()
+    void DeathScreen()
+    {
+        levelFailedUI.SetActive(true);
+    }
+
+    public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void LoadNext()
+    {
+        if (!gameHasEnded)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 	
 }

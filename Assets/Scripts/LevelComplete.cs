@@ -5,6 +5,16 @@ public class LevelComplete : MonoBehaviour {
 
 	public void LoadNextLevel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        FindObjectOfType<GameManager>().LoadNext();
+    }
+    
+    public void MainMenu()
+    {
+        FindObjectOfType<GameManager>().MainMenu();
+    }
+
+    public void RetryLevel()
+    {
+        FindObjectOfType<GameManager>().Restart();
     }
 }
