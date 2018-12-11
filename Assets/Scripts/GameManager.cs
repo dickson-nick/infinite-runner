@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
 
     public void LevelComplete()
     {
+        PlayerPrefs.SetInt("UnlockedLevel", SceneManager.GetActiveScene().buildIndex);
         Debug.Log("Level Complete!");
         levelCompleteUI.SetActive(true);
     }

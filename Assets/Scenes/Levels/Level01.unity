@@ -32,11 +32,11 @@ RenderSettings:
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
-  m_DefaultReflectionMode: 0
+  m_DefaultReflectionMode: 1
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
-  m_CustomReflection: {fileID: 0}
+  m_CustomReflection: {fileID: 8900000, guid: 1cde0e200e792cb4491204276a656490, type: 3}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
@@ -234,7 +234,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.5
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -770,7 +770,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 735e6193d821d064b978b93ace9c923e, type: 2}
+  - {fileID: 2100000, guid: cc48c2215eaa3b545aa34f7bc6e142a5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -995,7 +995,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 7e86d6fd844aa9e4ca2640dbab790ada, type: 3}
+  - {fileID: 2100000, guid: 3b2c684e9c3713143836a8ec8effaf0c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1173,7 +1173,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: c85009ba6d17b34488f9eed136125cc6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -479.8017
+      value: -482.1
       objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: c85009ba6d17b34488f9eed136125cc6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1360,6 +1360,16 @@ Prefab:
     - target: {fileID: 4670030693051256, guid: 1ddea3fa306123e41a05ca33870707e9, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65367381337749150, guid: 1ddea3fa306123e41a05ca33870707e9,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 54997299138889576, guid: 1ddea3fa306123e41a05ca33870707e9,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ddea3fa306123e41a05ca33870707e9, type: 2}

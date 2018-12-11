@@ -13,7 +13,7 @@ public class FollowPlayer : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        offset.Set(0, 8, -22);
+        offset.Set(0, 8, -28);
 	}
 	
 	// Update is called once per frame
