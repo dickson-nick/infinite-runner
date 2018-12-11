@@ -140,6 +140,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce25672a8568bcc42ab29677c59a17d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wireless: {fileID: 8300000, guid: e86392ea0d01100429cd58a69c9e1cef, type: 3}
+  honey: {fileID: 8300000, guid: 7d429e1429bd935459f90590d6aa65b8, type: 3}
+  wantToKnow: {fileID: 8300000, guid: 694d51b2520260640964d5082f746b80, type: 3}
 --- !u!4 &188468632
 Transform:
   m_ObjectHideFlags: 0
@@ -526,8 +529,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7d429e1429bd935459f90590d6aa65b8, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: e86392ea0d01100429cd58a69c9e1cef, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 0.645
   m_Pitch: 1
   Loop: 1

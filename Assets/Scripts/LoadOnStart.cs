@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class LoadOnStart : MonoBehaviour {
 
+    public AudioClip wireless;
+    public AudioClip honey;
+    public AudioClip wantToKnow;
+
     // Use this for initialization
     void Awake() {
         // Create Settings if none exist
@@ -24,6 +28,21 @@ public class LoadOnStart : MonoBehaviour {
 
         if (!PlayerPrefs.HasKey("EffectsVolume"))
             PlayerPrefs.SetFloat("EffectsVolume", 1.0f);
+
+        if (!PlayerPrefs.HasKey("Soundtrack"))
+            PlayerPrefs.SetInt("Soundtrack", 0);
+
+        int soundtrack = PlayerPrefs.GetInt("Soundtrack");
+        AudioSource bgMusic = GameObject.Find("Background Music").GetComponent<AudioSource>();
+
+        if (soundtrack == 0)
+            bgMusic.clip = wireless;
+        else if (soundtrack == 1)
+            bgMusic.clip = honey;
+        else if (soundtrack == 2)
+            bgMusic.clip = wantToKnow;
+
+        bgMusic.Play();
 
         DontDestroyOnLoad(gameObject);
     }

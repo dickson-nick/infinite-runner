@@ -13,47 +13,12 @@ public class SetKeyOnClick : MonoBehaviour {
 
         GameObject.Find("Music Slider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("MusicVolume");
         GameObject.Find("Effects Slider").GetComponent<Slider>().value = PlayerPrefs.GetFloat("EffectsVolume");
+        GameObject.Find("Soundtrack Dropdown").GetComponent<Dropdown>().value = PlayerPrefs.GetInt("Soundtrack");
     }
 
     public void SetKey(string key)
     {
         StartCoroutine(WaitForKeyDown(key));
-
-        /*
-        string value = "";
-        string gameObjectPath;
-        bool keyFound = false;
-
-        do
-        {
-            foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
-            {
-                if (Input.GetKey(vKey))
-                {
-                    value = vKey.ToString();
-                    keyFound = true;
-                }
-            }
-        } while (!keyFound);
-
-        value = value.ToLower();
-
-
-        if (key.Equals("LeftKeyBind"))
-        {
-            gameObjectPath = "Move Left Button/Text";
-        } else if (key.Equals("RightKeyBind"))
-        {
-            gameObjectPath = "Move Right Button/Text";
-        } else
-        {
-            gameObjectPath = "Jump Button/Text";
-        }
-
-        PlayerPrefs.SetString(key, value);
-        GameObject.Find(gameObjectPath).GetComponent<Text>().text = value.ToUpper();
-        */
-
     }
 
     IEnumerator WaitForKeyDown(string key)
