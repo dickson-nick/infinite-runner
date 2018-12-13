@@ -42,6 +42,7 @@ public class LoadOnStart : MonoBehaviour {
         else if (soundtrack == 2)
             bgMusic.clip = wantToKnow;
 
+        bgMusic.volume = PlayerPrefs.GetFloat("MusicVolume");
         bgMusic.Play();
 
         DontDestroyOnLoad(gameObject);
